@@ -1,0 +1,33 @@
+@use "./colors" as colors;
+
+.header {
+  background-image: url("../img/finance.jpg");
+  filter: brightness(85%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  height: 50rem;
+}
+.header2 {
+  background-image: linear-gradient(#9e9e9e9c, rgba(0, 0, 0, 0.37)),
+    url("../img/table.png");
+  filter: brightness(85%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  height: 50rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    background-image: url("../img/financeBig.jpg");
+    background-attachment: fixed;
+    height: 60rem;
+  }
+  .header2 {
+    background-image: linear-gradient(#977b669c, rgba(0, 0, 0, 0.37)),
+      url("../img/tableBig.png");
+    background-attachment: fixed;
+    height: 60rem;
+  }
+}

@@ -1,0 +1,69 @@
+@use "./colors" as colors;
+.contact {
+  background-color: #fff;
+  &__wrapper {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__text {
+    font-style: normal;
+    font-size: 1.6rem;
+    letter-spacing: 0.03em;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    line-height: 1.6;
+    gap: 10px;
+  }
+  &__text-link {
+    color: #c8a588;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0.2rem;
+    transition: color 1s ease;
+    text-transform: lowercase;
+    &:hover,
+    &:focus {
+      color: #53412c;
+    }
+
+    i {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.footer {
+  background-color: #c8a588;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  &__text {
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    img {
+      margin-left: 10px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .contact {
+    background-color: #fff;
+
+    &__text {
+      flex-direction: row;
+      gap: 3rem;
+    }
+  }
+}

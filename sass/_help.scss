@@ -1,0 +1,61 @@
+@use "./colors" as colors;
+
+.help {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.808), #000000c9),
+    url("../img/calculator1.jpg");
+  padding: 10px 10px;
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  height: 50rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &__text {
+    color: #fff;
+    font-size: 2.3rem;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+  }
+
+  &__btn {
+    padding: 1em 1.5em;
+    border-radius: 15px;
+    margin-top: 30px;
+    background-color: #c8a588;
+    color: #fff;
+    border: 1px solid #c8a588;
+    font-size: 1.6rem;
+    transition: background-color 0.8s ease;
+
+    a {
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.8s ease;
+    }
+  }
+}
+.help__btn:hover,
+.help__btn:focus {
+  background-color: #fff;
+
+  a {
+    color: #c8a588;
+  }
+}
+
+@media (min-width: 768px) {
+  .help {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.808), #000000c9),
+      url("../img/calculatorBig1.jpg");
+    background-attachment: fixed;
+    height: 40rem;
+
+    &__text {
+      font-size: 3.2rem;
+    }
+  }
+}

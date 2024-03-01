@@ -1,0 +1,91 @@
+@use "./components" as components;
+@use "./help" as help;
+
+@use "./contact" as contact;
+@use "./header" as header;
+@use "./about" as about;
+@use "./services" as services;
+@use "./accounting" as accounting;
+@use "./colors" as colors;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Abril Fatface", serif;
+  font-family: "Poppins", sans-serif;
+  background-color: colors.$background;
+  scroll-behavior: smooth;
+  scroll-padding: 6rem;
+  margin: 0 auto;
+  letter-spacing: 0.03em;
+}
+
+.bodyScroll {
+  overflow: hidden;
+}
+
+html {
+  font-size: 10px;
+  color: colors.$text;
+  line-height: 1.1667;
+  letter-spacing: 0.03em;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.list-style {
+  list-style: none;
+}
+
+.flex-list {
+  display: flex;
+}
+
+.photo-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+@media (min-width: 1200px) {
+  .photo-list {
+    flex-wrap: nowrap;
+  }
+}

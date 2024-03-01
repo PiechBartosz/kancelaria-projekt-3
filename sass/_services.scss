@@ -1,0 +1,104 @@
+@use "./colors" as colors;
+
+.services {
+  padding: 8rem 1rem;
+  &__title {
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 1.1667;
+    letter-spacing: 0.03em;
+
+    text-align: center;
+    font-weight: bold;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    gap: 2rem;
+    transform-origin: center center;
+  }
+
+  &__card {
+    width: 90%;
+    border: 1px solid #53412c;
+    align-items: center;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    transform-origin: center center;
+    transition: background-color 0.8s ease, transform 0.8s;
+    border-radius: 20px;
+
+    i {
+      font-size: 5rem;
+      color: #53412c;
+      transition: color 1.3s ease;
+    }
+
+    &__title {
+      font-size: 1.8rem;
+      text-align: center;
+      color: #53412c;
+      transition: color 1.3s ease;
+    }
+    &__btn {
+      padding: 1.5rem 2rem;
+      background-color: #c8a588;
+      border: 1px solid #c8a588;
+      border-radius: 20px;
+      transition: background-color 0.8s ease;
+
+      a {
+        color: #fff;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+.services__card:hover,
+.services__card:focus {
+  background-color: #c8a588;
+  transform: scale(1.1);
+  border: 1px solid #53412c;
+  i {
+    color: #fff;
+  }
+  h4 {
+    color: #fff;
+  }
+  .services__card__btn {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+
+    a {
+      color: #53412c;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .services {
+    &__wrapper {
+      flex-direction: row;
+    }
+    &__card {
+      flex-grow: 1;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .services {
+    &__wrapper {
+      gap: 5rem;
+    }
+  }
+}
